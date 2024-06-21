@@ -4,6 +4,17 @@
 Home page
 {% endblock %}
 
+<div class = "grid grid-cols-3 gap-4 m-4">
+
 {% block content %}
 <h1>This is Django page<h1>
+    {% for chai in chais %}
+    <div class = "chai-item">
+        <img src= "{{chai.image.url}}" alt = "">
+        <h1>{{chai.name}}</h1>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
+
